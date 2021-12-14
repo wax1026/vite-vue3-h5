@@ -20,10 +20,10 @@
 
 ```bash
 # 克隆项目
-# git clone https://gitee.com/jifengf/vue3-h5-demo.git
+# git clone https://gitee.com/jifengf/vite-vue3-h5.git
 
 # 进入项目目录
-cd Vue3-H5-DEMO
+cd vite-vue3-h5
 
 # 安装依赖
 npm install
