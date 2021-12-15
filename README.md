@@ -36,7 +36,7 @@ npm run dev
 # 构建测试环境 npm run build:stage
 # 构建生产环境 npm run build:prod
 # 构建mock生产环境 npm run build:mock
-# 前端访问地址 http://localhost:80
+# 前端访问地址 http://localhost:8000
 ```
 
 ## 登录信息
