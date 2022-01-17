@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 
+// 引入后，vant部分组件如tabbar等样式有问题
 import "@/assets/styles/index.scss"; // global css
 
 import App from "./App";
