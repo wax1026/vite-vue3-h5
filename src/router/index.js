@@ -21,11 +21,11 @@ import { createWebHistory, createRouter } from 'vue-router'
  */
 
 const indexRouter = {
-  path: '/',
-  component: () => import('@/views/index'),
-  redirect: '/index',
+  path: "/",
+  component: () => import("@/layout/index"),
+  redirect: "/index",
   children: []
-}
+};
 
 // 读取路由文件
 const routerContext = import.meta.globEager('./modules/**/*.js');
