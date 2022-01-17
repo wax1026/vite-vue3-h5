@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from "vue-router";
 
 /**
  * Note: 路由配置项
@@ -28,47 +28,47 @@ const indexRouter = {
 };
 
 // 读取路由文件
-const routerContext = import.meta.globEager('./modules/**/*.js');
+const routerContext = import.meta.globEager("./modules/**/*.js");
 
 for (const val of Object.values(routerContext)) {
-  indexRouter.children.push(val.default[0] || val)
+  indexRouter.children.push(val.default[0] || val);
 }
 
 // 公共路由
 export const constantRoutes = [
   ...indexRouter.children,
   {
-    path: '/',
+    path: "/",
     meta: { index: 0 },
-    name: 'dex',
-    component: () => import('@/views/index'),
-    redirect: '/login',
+    name: "dex",
+    component: () => import("@/views/index"),
+    redirect: "/login"
   },
   {
-    path: '/login',
+    path: "/login",
     meta: { index: 0 },
-    name: 'login',
-    component: () => import('@/views/login'),
+    name: "login",
+    component: () => import("@/views/login"),
     hidden: true
   },
   // 无权限页面
   {
-    path: '/nopermission',
-    name: 'nopermission',
+    path: "/nopermission",
+    name: "nopermission",
     meta: { index: 0 },
-    component: () => import('@/views/error/NoPermission')
+    component: () => import("@/views/error/NoPermission")
   },
   {
-    path: '/*',
-    name: '404',
+    path: "/*",
+    name: "404",
     meta: { index: 0 },
-    component: () => import('@/views/error/404')
+    component: () => import("@/views/error/404")
   },
   {
-    path: '/index',
-    component: () => import('@/views/index'),
-    name: 'Index',
-    meta: { index: 2, title: '首页', icon: 'dashboard', affix: true },
+    path: "/index",
+    component: () => import("@/views/index"),
+    name: "Index",
+    meta: { index: 2, title: "首页", icon: "dashboard", affix: true }
   }
 ];
 
@@ -77,11 +77,11 @@ const router = createRouter({
   routes: constantRoutes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else {
-      return { top: 0 }
+      return { top: 0 };
     }
-  },
+  }
 });
 
 export default router;
