@@ -1,5 +1,20 @@
-@import "../../assets/styles/mixin.scss";
-.title {
-  font-size: 14px;
-  margin: 12px;
+.van-swipe img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  padding: 15px 30px;
+  pointer-events: none;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.goods-cell {
+  margin: 8px 0;
+  background-color: #F7F7F7;
+  .goods-card {
+    padding: 8px 16px;
+  }
+}
+
+.delete-button {
+  height: 100%;
 }

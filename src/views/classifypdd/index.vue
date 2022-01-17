@@ -5,25 +5,20 @@
       <van-sidebar v-model="active" @change="onChange">
         <van-sidebar-item
           :class="'sidebaritem_' + index"
-          v-for="(item, index) in cateList"
-          :key="item.cate_title"
-          :title="item.cate_title"
+          v-for="(item, index) in pddList"
+          :key="item.optName"
+          :title="item.optName"
         />
       </van-sidebar>
-      <div class="shop-content" v-if="cateList.length">
-        <template v-for="item in cateList[active].cate_data" :key="item.title">
-          <h4 class="cate-title">{{ item.title }}</h4>
-          <van-grid
-            :column-num="3"
-            :gutter="0"
-            :border="false"
-            :icon-size="'66px'"
-          >
-            <template v-for="content in item.list" :key="content.title">
+      <div class="shop-content" v-if="pddList.length">
+        <template v-for="item in pddList[active].list" :key="item.optName">
+          <div class="cate-title">{{ item.optName }}</div>
+          <van-grid :column-num="3" :border="false" :icon-size="'60px'">
+            <template v-for="content in item.list" :key="content.optName">
               <van-grid-item
-                :icon="content.imgUrl"
-                :text="content.title"
-                @click="nav2shop(content.title)"
+                :icon="content.imageUrl"
+                :text="content.optName"
+                @click="nav2shop(content.optName)"
               />
             </template>
           </van-grid>
@@ -35,8 +30,8 @@
 </template>
 
 <script setup name="Classify">
-import { getClassifyJD } from "@/api/classify";
 import { Notify } from "vant";
+import { getClassifyPDD } from "@/api/classify";
 
 const stickyRef = ref();
 const tabbarRef = ref();
@@ -44,7 +39,7 @@ const containerHeight = ref("");
 const tabbarHeight = ref("");
 
 const active = ref(0);
-const cateList = ref([]);
+const pddList = ref([]);
 
 nextTick(() => {
   containerHeight.value =
@@ -60,9 +55,11 @@ nextTick(() => {
   );
 });
 
-getClassifyJD().then((res) => {
-  cateList.value = res.data;
+// 获取数据
+getClassifyPDD().then((res) => {
+  pddList.value = res.data;
 });
+
 // 监听active的变化，shop-content滚动到顶部
 watch(active, (value) => {
   document.querySelector(".shop-content").scrollTop = 0;
@@ -91,5 +88,4 @@ const nav2shop = (title) => {
   overflow: auto;
 }
 </style>
-
 <style scoped lang="scss" src="./index.scss"></style>

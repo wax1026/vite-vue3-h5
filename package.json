@@ -1,6 +1,6 @@
 {
   "name": "wax",
-  "version": "3.8.0",
+  "version": "1.0.0",
   "description": "VUE3-H5-DEMO",
   "author": "wax",
   "license": "MIT",
@@ -22,10 +22,11 @@
     "axios": "0.24.0",
     "better-scroll": "^2.4.2",
     "js-cookie": "3.0.1",
+    "lib-flexible": "^0.3.2",
     "mockjs": "^1.1.0",
     "vant": "^3.3.7",
     "vite-plugin-style-import": "^1.4.0",
-    "vue": "3.2.22",
+    "vue": "^3.2.22",
     "vue-cropper": "1.0.2",
     "vue-router": "4.0.12",
     "vuex": "4.0.2"

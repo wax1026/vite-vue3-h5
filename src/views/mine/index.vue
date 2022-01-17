@@ -1,16 +1,23 @@
 <template>
   <sticky ref="stickyRef"></sticky>
-
   <div class="container">
     <div style="padding: 12px">
       <div class="title">我</div>
-      <van-button block type="primary" size="small">我-小型按钮</van-button>
+      <van-button block type="danger" @click="handleLogout" size="small"
+        >登出</van-button
+      >
+      <br />
+      <van-button block type="danger" @click="jumpToJsTour" size="small"
+        >进入江苏省A级景区舒适度</van-button
+      >
     </div>
   </div>
   <tabbar ref="tabbarRef"></tabbar>
 </template>
 
 <script setup name="Mine">
+import { getToken, setToken, removeToken } from "@/utils/auth";
+
 const stickyRef = ref();
 const tabbarRef = ref();
 const containerHeight = ref("");
@@ -29,5 +36,26 @@ nextTick(() => {
     tabbarRef.value?.$el.offsetHeight
   );
 });
+
+const router = useRouter();
+
+const handleLogout = () => {
+  removeToken(); // 移除token
+  router.push({ path: "/login" }); //跳转到登录页
+};
+
+const jumpToJsTour = () => {
+  router.push({ path: "/tourism/index" }); //跳转到江苏旅游
+};
 </script>
+<style scoped>
+.container {
+  --height: v-bind("containerHeight");
+  --container-height: calc(100vh - var(--height));
+  --tabbarHeight: v-bind("tabbarHeight");
+
+  height: calc(100vh - var(--height));
+  overflow: auto;
+}
+</style>
 <style scoped lang="scss" src="./index.scss"></style>

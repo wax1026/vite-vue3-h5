@@ -1,5 +1,161 @@
-@import "../../assets/styles/mixin.scss";
 .title {
   font-size: 14px;
   margin: 12px;
+}
+
+.card {
+  background-color: var(--van-card-background-color);
+  border-radius: 15px;
+  margin: 0 12px 12px;
+  padding-top: 12px;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--van-card-background-color);
+
+    padding: 4px 12px;
+    margin-bottom: 12px;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .shop-name {
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+
+  .sub-header {
+    display: flex;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      justify-content: flex-start;
+      div:first-child {
+        margin-left: 38px;
+        font-size: 12px;
+        color: rgb(173, 0, 0);
+        padding: 1px 2px;
+        background: rgb(255, 225, 225);
+        border-radius: 2px;
+      }
+      div:last-child {
+        margin-left: 10px;
+        font-size: 12px;
+        padding: 1px 2px;
+      }
+    }
+
+    &-right {
+      margin-right: 6px;
+      font-size: 12px;
+      padding: 1px 2px;
+    }
+  }
+
+  // card-container
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    &-left {
+      width: 26px;
+      padding-left: 12px;
+      margin-top: 44px;
+    }
+
+    .tag-content {
+      margin: 4px;
+      color: #262626;
+      background-color: #f2f2f2;
+    }
+    .van-tag--plain::before {
+      border: none;
+    }
+
+    .num-content {
+      display: flex;
+
+      div:first-child,
+      div:last-child {
+        padding: 0 4px;
+        color: var(--van-button-default-color);
+      }
+      div:nth-child(2) {
+        padding: 0 16px;
+        color: #262626;
+        background-color: #f2f2f2;
+      }
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: flex-end;
+      div {
+        cursor: pointer;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  // card
+  .van-card {
+    padding: 0;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    flex: 1;
+  }
+}
+
+// 底部订单信息
+.bottom-legned {
+  position: fixed;
+  bottom: var(--tabbarHeight);
+  height: 40px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .van-checkbox {
+    margin-left: 12px;
+  }
+  .bl-middle {
+    flex: 1;
+    margin-left: 12px;
+  }
+
+  .van-button {
+    margin-right: 12px;
+  }
+}
+
+// 购物车为空时状态信息
+.empty-content {
+  width: 100%;
+  height: calc(100% - var(--tabbarHeight));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .empty-description {
+    margin-top: 24px;
+    div:first-child {
+      font-size: 24px;
+      text-align: center;
+      color: rgb(108, 108, 108);
+    }
+
+    div:last-child {
+      font-size: 14px;
+      margin-top: 24px;
+      color: rgb(156, 156, 156);
+    }
+  }
 }

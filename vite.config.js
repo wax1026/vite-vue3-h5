@@ -32,6 +32,10 @@ export default defineConfig(({ mode, command }) => {
           target: "http://localhost:8080",
           changeOrigin: true,
           rewrite: (p) => p.replace(/^\/dev-api/, "")
+        },
+        "/JSCTO_SCENIC_COMFORT_MS": {
+          target: "http://jq.jswlpt.com/",
+          changeOrigin: true
         }
       }
     }

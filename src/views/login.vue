@@ -39,7 +39,7 @@ const { proxy } = getCurrentInstance();
 
 const loginForm = ref({
   username: "admin",
-  password: "admin123",
+  password: "admin123"
 });
 
 const loading = ref(false);
@@ -60,7 +60,7 @@ function handleLogin() {
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .title {
   margin: 0px auto 30px auto;
   text-align: center;
