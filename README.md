@@ -47,5 +47,3 @@ npm run dev
 - admin/admin123
 
 ## 示例DEMO
-
-![输入图片说明](src/assets/aa71c12e1c110227e4f4d49d15dd2837.gif)
