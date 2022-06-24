@@ -1,5 +1,8 @@
-@import "../../assets/styles/mixin.scss";
-.title {
-  font-size: 14px;
-  margin: 12px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #408916;
+  cursor: pointer;
 }

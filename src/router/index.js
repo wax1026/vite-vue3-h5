@@ -23,7 +23,8 @@ import { createWebHistory, createRouter } from "vue-router";
 const indexRouter = {
   path: "/",
   component: () => import("@/layout/index"),
-  redirect: "/index",
+  redirect: "/home/index",
+  meta: { index: 0 },
   children: []
 };
 
@@ -36,17 +37,10 @@ for (const val of Object.values(routerContext)) {
 
 // 公共路由
 export const constantRoutes = [
-  ...indexRouter.children,
-  {
-    path: "/",
-    meta: { index: 0 },
-    name: "dex",
-    component: () => import("@/views/index"),
-    redirect: "/login"
-  },
+  { ...indexRouter },
   {
     path: "/login",
-    meta: { index: 0 },
+    meta: { index: 0, title: "登录" },
     name: "login",
     component: () => import("@/views/login"),
     hidden: true
@@ -55,13 +49,13 @@ export const constantRoutes = [
   {
     path: "/nopermission",
     name: "nopermission",
-    meta: { index: 0 },
+    meta: { index: 0, title: "无权限" },
     component: () => import("@/views/error/NoPermission")
   },
   {
     path: "/*",
     name: "404",
-    meta: { index: 0 },
+    meta: { index: 0, title: "404" },
     component: () => import("@/views/error/404")
   },
   {

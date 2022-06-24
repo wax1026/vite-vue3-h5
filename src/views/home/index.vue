@@ -1,16 +1,6 @@
 <template>
   <sticky ref="stickyRef"></sticky>
-
-  <div class="container">
-    <div style="padding: 12px">
-      <div class="title">首页</div>
-      <van-button block @click="jumptoDetail" type="primary" size="small"
-        >首页-小型按钮</van-button
-      >
-    </div>
-  </div>
-
-  <tabbar ref="tabbarRef"></tabbar>
+  <div class="container" @click="handleJump">Small Demo</div>
 </template>
 
 <script setup name="Home">
@@ -21,30 +11,20 @@ const tabbarHeight = ref("");
 
 const router = useRouter();
 
-function jumptoDetail() {
-  router.push("/login");
-}
-
 nextTick(() => {
-  containerHeight.value =
-    stickyRef.value?.$el?.offsetHeight +
-    tabbarRef.value?.$el.offsetHeight +
-    "px";
+  containerHeight.value = stickyRef.value?.$el?.offsetHeight + "px";
 
-  tabbarHeight.value = tabbarRef.value?.$el.offsetHeight + "px";
-  console.log(
-    "sticky,tabbar 高度：",
-    stickyRef.value?.$el?.offsetHeight,
-    tabbarRef.value?.$el.offsetHeight
-  );
+  console.log("sticky,tabbar 高度：", stickyRef.value?.$el?.offsetHeight);
 });
-</script>
 
+const handleJump = () => {
+  router.push({ path: "/mine/index" }); //跳转到登录页
+};
+</script>
 <style scoped>
 .container {
   --height: v-bind("containerHeight");
   --container-height: calc(100vh - var(--height));
-  --tabbarHeight: v-bind("tabbarHeight");
 
   height: calc(100vh - var(--height));
   overflow: auto;

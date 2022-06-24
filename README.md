@@ -1,4 +1,4 @@
-## 平台简介
+## 平台简介（simple 分支）
 
 - 本仓库为前端技术栈 [Vue3](https://v3.cn.vuejs.org) + [Vant3](https://vant-contrib.gitee.io/vant/v3/#/zh-CN) + [Vite2](https://cn.vitejs.dev) 版本。
 
@@ -15,6 +15,20 @@
 
 - postcss.config.js
   postcss 配置文件
+
+## 分支介绍
+
+### master 分支
+
+1. 简单 demo 示例。
+
+### dev 分支
+
+1. 这里是列表文本通过 mock 数据，实现了首页，某东分类，某多分类，购物车（部分功能），我的(可进入江苏旅游舒适度页面）
+
+### simple 分支
+
+1. 基础框架
 
 ## 前端运行
 

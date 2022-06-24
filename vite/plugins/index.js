@@ -8,7 +8,6 @@ import createCompression from './compression'
 import createSetupExtend from './setup-extend'
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
-  console.log('viteEnv', viteEnv.VITE_MOCK, typeof viteEnv.VITE_MOCK)
   const vitePlugins = [
     vue(),
     // vant 按需引入
