@@ -17,7 +17,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
         {
           libraryName: 'vant',
           esModule: true,
-          resolveStyle: (name) => `vant/es/${name}/style`,
+          resolveStyle: (name) => `../es/${name}/style`,
         },
       ],
     }),
