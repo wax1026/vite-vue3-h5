@@ -56,3 +56,19 @@ npm run dev
 ## 演示图
 
 （https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/aa71c12e1c110227e4f4d49d15dd2837.gif）
+
+
+<table>
+    <tr>
+        <td><img src="https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220624164621.png"/></td>
+        <td><img src="https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220624164630.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220624164636.png"/></td>
+        <td><img src="https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220624164649.png"/></td>
+    </tr>
+     <tr>
+        <td><img src="https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220624164703.png"/></td>
+        <td><img src="https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220624165508.png"/></td>
+    </tr>
+  </table>
