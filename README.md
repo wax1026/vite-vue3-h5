@@ -53,16 +53,6 @@ npm run dev
 
 - admin/admin123
 
-## 示例 DEMO
-
-![输入图片说明](src/assets/aa71c12e1c110227e4f4d49d15dd2837.gif)
-
 ## 演示图
-<table>
-    <tr>
-        <td>
-<img src="https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/aa71c12e1c110227e4f4d49d15dd2837.gif"/>
+![image](https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/aa71c12e1c110227e4f4d49d15dd2837.gif)
 
-</td>
-    </tr>
-</table>
