@@ -54,5 +54,5 @@ npm run dev
 - admin/admin123
 
 ## 示例 DEMO
-
+<img src="https://github.com/wax1026/vite-vue3-h5/blob/dev/src/assets/aa71c12e1c110227e4f4d49d15dd2837.gif"/>
 ![输入图片说明](src/assets/aa71c12e1c110227e4f4d49d15dd2837.gif)
