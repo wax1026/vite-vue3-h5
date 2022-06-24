@@ -28,7 +28,7 @@
   </van-form>
   <!--  底部  -->
   <footer class="footer">
-    <p>Copyright © 2018-2021 All Rights Reserved.</p>
+    <div>Copyright © 2018-2021 All Rights Reserved.</div>
   </footer>
 </template>
 
@@ -73,8 +73,7 @@ function handleLogin() {
   bottom: 0;
   left: 0;
   width: 100%;
-  p {
-    display: inline-block;
+  div {
     width: 100%;
     font-size: 14px;
     margin: 0px 20px 20px auto;
