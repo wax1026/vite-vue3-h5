@@ -6,7 +6,7 @@
 
 - 移动端 Vant3.x + Vue3.x + Vite2.x + Mockjs + Vue-Router4.x + Vuex4.x + REM(postcss-pxtorem) 布局布局的实例运用
 
-
+<请移步Gitee>
 [Gitee地址](https://gitee.com/jifengf/vite-vue3-h5.git)下载地址
 
 
